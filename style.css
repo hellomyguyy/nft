@@ -187,4 +187,8 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
             height: 260px;
             padding-top: 10px;
         }
+	
+        .box {
+            padding: 0px 10px;;
+        }
 }
