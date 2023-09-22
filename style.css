@@ -160,7 +160,7 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
 }
 
 .navbar input:checked ~ .menu {
-    right: 0;
+    right: 100;
 }
 
 @media screen and (max-width: 992px) {
