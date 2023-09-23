@@ -176,7 +176,7 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
             align-items: center;
             position: fixed;
             top: 0;
-            right: -300px;
+            right: -180px;
             background: #000;
             width: min-content;
             height: 260px;
