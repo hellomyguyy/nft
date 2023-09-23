@@ -159,10 +159,6 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
     width: 30px;
 }
 
-.navbar input:checked ~ .menu {
-    right: 100;
-}
-
 @media screen and (max-width: 992px) {
         .hamburger,
         .toggle-menu {
@@ -181,7 +177,7 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
             align-items: center;
             position: fixed;
             top: 0;
-            right: -180px;
+            right: -300px;
             background: #000;
             width: min-content;
             height: 260px;
