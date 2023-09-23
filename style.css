@@ -159,6 +159,11 @@ div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
     width: 30px;
 }
 
+.navbar input:checked ~ .menu {
+    right: 0;
+    right: 100;
+}
+
 @media screen and (max-width: 992px) {
         .hamburger,
         .toggle-menu {
