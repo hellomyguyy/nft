@@ -32,26 +32,21 @@ img
     position: relative;
 }
 
-.box:before {
-    width: 80px;
-    height: 80px;
-    border: 4px solid #adeae9;
-    border-color: transparent #adeae9 transparent #adeae9;
-    border-radius: 50%;
-    animation: loader 1s linear infinite;
-  }
-
-.box > img {
-    width: 100% !important;
+.box img {
+    opacity: 0;
 }
 
+.box.loaded img {
+    animation: fadeIn 2s ease-in;
+    opacity: 1;
+}
 
-@keyframes loader {
-    0% {
-        transform: translate(-50%,-50%) rotate(0deg);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    100% {
-        transform: translate(-50%,-50%) rotate(360deg);
+    to {
+        opacity: 1;
     }
 }
 
