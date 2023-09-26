@@ -11,6 +11,8 @@ html, body
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img
@@ -27,8 +29,26 @@ img
     font-size: 30px;
     font-family: monospace;
     overflow: auto;
-    
+    position: relative;
 }
+
+.box:before {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #adeae9;
+    border-color: transparent #adeae9 transparent #adeae9;
+    border-radius: 50%;
+    animation: loader 1s linear infinite;
+  }
+
+  @keyframes loader {
+    0% {
+      transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%,-50%) rotate(360deg);
+    }
+  }
 
 div.container
 {
@@ -70,6 +90,7 @@ div.borderYtoX a:before, div.borderYtoX a:after
     content: '';
     background: #adeae9;
     transition: all 0.3s;
+
 }
 
 div.borderYtoX a:before
