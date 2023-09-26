@@ -25,15 +25,15 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="box" id="Robot" ><img src="./img/250.png" loading="eager" />250</div>
-            <div class="box" id="Ghost" ><img src="./img/249.png" loading="eager" />249</div>
+            <div class="box" id="Robot" ><img src="./img/250.png" loading="lazy" />250</div>
+            <div class="box" id="Ghost" ><img src="./img/249.png" loading="lazy" />249</div>
             <div class="box" ><img src="./img/248.png" loading="lazy" />248</div>
-            <div class="box" id="Alien" ><img src="./img/247.png" loading="eager" />247</div>
-            <div class="box" ><img src="./img/246.png" loading="eager" />246</div>
-            <div class="box" ><img src="./img/245.png" loading="eager" />245</div>
-            <div class="box" ><img src="./img/244.png" loading="eager" />244</div>
-            <div class="box" ><img src="./img/243.png" loading="eager" />243</div>
-            <div class="box" ><img src="./img/242.png" loading="eager" />242</div>
+            <div class="box" id="Alien" ><img src="./img/247.png" loading="lazy" />247</div>
+            <div class="box" ><img src="./img/246.png" loading="lazy" />246</div>
+            <div class="box" ><img src="./img/245.png" loading="lazy" />245</div>
+            <div class="box" ><img src="./img/244.png" loading="lazy" />244</div>
+            <div class="box" ><img src="./img/243.png" loading="lazy" />243</div>
+            <div class="box" ><img src="./img/242.png" loading="lazy" />242</div>
             <div class="box" ><img src="./img/241.png" loading="lazy" />241</div>
             <div class="box" ><img src="./img/240.png" loading="lazy" />240</div>
             <div class="box" ><img src="./img/239.png" loading="lazy" />239</div>
@@ -275,7 +275,20 @@
             <div class="box" ><img src="./img/3.png" loading="lazy" />3</div>
             <div class="box" ><img src="./img/2.png" loading="lazy" />2</div>
             <div class="box" ><img src="./img/1.png" loading="lazy" />1</div>
-
         </div>
+
+        
+        <script >
+            document.addEventListener('DOMContentLoaded', function() {
+                const imageContainers = document.querySelectorAll('.box');
+        
+                imageContainers.forEach(function(container) {
+                    const image = container.querySelector('img');
+                    image.addEventListener('load', function() {
+                        container.classList.add('loaded');
+                    });
+                });
+            }); 
+        </script>
     </body>
 </html>
