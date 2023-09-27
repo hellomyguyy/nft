@@ -32,9 +32,18 @@ img
     position: relative;
 }
 
-.box img {
-    opacity: 0;
-}
+.box:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #adeae9;
+    border-color: transparent #adeae9 transparent #adeae9;
+    border-radius: 50%;
+    animation: loader 2s linear forwards;
+  }
 
 .box.loaded img {
     animation: fadeIn 2s ease-in;
@@ -49,6 +58,18 @@ img
         opacity: 1;
     }
 }
+
+@keyframes loader {
+    0% {
+      transform: translate(-50%,-50%) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%,-50%) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
 
 div.container
 {
